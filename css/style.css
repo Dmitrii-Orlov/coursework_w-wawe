@@ -664,54 +664,54 @@ body {
    color: var(--color-white);
 }
 
-.podcast-icon__pause {
+.podcast-play__pause {
    display: none;
 }
 
-.podcast-icon__play--hidden {
+.podcast-play__icon--hidden {
    display: none;
 }
 
-.podcast-icon__pause--active {
+.podcast-play__pause--active {
    display: flex;
 }
 
 
-.podcast-icon__play circle {
+.podcast-play__icon circle {
    transition: stroke 0.3s ease-in-out;
 }
 
-.podcast-icon__play path {
+.podcast-play__icon path {
    transition: fill 0.3s ease-in-out;
 }
 
-.podcast-icon__play:focus circle,
-.podcast-icon__play:focus-visible circle {
+.podcast-play__icon:focus circle,
+.podcast-play__icon:focus-visible circle {
    stroke: var(--color-blue-bluebell);
 }
 
-.podcast-icon__play:focus path,
-.podcast-icon__play:focus-visible path {
+.podcast-play__icon:focus path,
+.podcast-play__icon:focus-visible path {
    fill: var(--color-blue-bluebell);
 }
 
-.podcast-icon__play:hover circle {
+.podcast-play__icon:hover circle {
    stroke: var(--color-blue-purple)
 }
 
-.podcast-icon__play:hover path {
+.podcast-play__icon:hover path {
    fill: var(--color-blue-purple)
 }
 
-.podcast-icon__play:active circle {
+.podcast-play__icon:active circle {
    stroke: var(--color-deep-purple);
 }
 
-.podcast-icon__play:active path {
+.podcast-play__icon:active path {
    fill: var(--color-white);
 }
 
-.podcast-icon__play:active {
+.podcast-play__icon:active {
    fill: var(--color-deep-purple);
 }
 

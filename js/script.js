@@ -158,12 +158,12 @@ etherBtn.forEach(function (el) {
 let podcastBtn = document.querySelectorAll('.podcast-play');
 
 podcastBtn.forEach(function (el) {
-   let Play = el.querySelector('.podcast-icon__play');
-   let Pause = el.querySelector('.podcast-icon__pause');
+   let Play = el.querySelector('.podcast-play__icon');
+   let Pause = el.querySelector('.podcast-play__pause');
 
    el.addEventListener('click', function () {
-      Play.classList.toggle('podcast-icon__play--hidden');
-      Pause.classList.toggle('podcast-icon__pause--active');
+      Play.classList.toggle('podcast-play__icon--hidden');
+      Pause.classList.toggle('podcast-play__pause--active');
    });
 });
 
