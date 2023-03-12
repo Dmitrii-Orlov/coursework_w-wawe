@@ -881,10 +881,11 @@ body {
    color: var(--color-blue-dark);
    transition: color 0.3s ease-in-out,
       background-color 0.3s ease-in-out,
-         transform 0.3s ease-in-out;
+      transform 0.3s ease-in-out;
 }
-.broadcast__link svg{
-      transition:  fill 0.3s ease-in-out,
+
+.broadcast__link svg {
+   transition: fill 0.3s ease-in-out,
       width 0.3s ease-in-out;
 }
 
@@ -1271,7 +1272,6 @@ body {
    color: var(--color-gray);
 }
 
-
 .guest-content__btn {
    position: relative;
    align-items: center;
@@ -1393,6 +1393,122 @@ body {
    transform: rotate(180deg);
 }
 
+/*! ПЛЕЙЛИСТЫ  */
+
+.playlists-container {
+display: inline-flex;
+flex-direction: column;
+}
+
+.playlists__title {
+   font-weight: 400;
+   font-size: 48px;
+   line-height: 100%;
+   color: var(--color-blue-dark);
+   max-width: 350px;
+   margin-bottom: 12px;
+}
+
+.playlists__subtitle {
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 16px;
+   color: var(--color-gray);
+   margin-bottom: 8px;
+}
+
+.playlist-genre {
+   display: inline-flex;
+   flex-direction: column;
+   margin-bottom: 4px;
+}
+
+.playlist-genre__item {
+   display: flex;
+
+}
+
+.playlist-genre__item span {
+   font-size: 20px;
+   line-height: 20px;
+   color: var(--color-blue-dark);
+   margin: 0;
+   padding: 0;
+   margin-bottom: 20px;
+}
+
+.playlist-genre__item input {
+   display: none;
+}
+
+.playlist-genre__label {
+   font-size: 26px;
+   margin-bottom: 20px;
+   cursor: pointer;
+}
+
+.playlists__input {
+   display: inline-flex;
+   border: 2px solid #b2b1b1;
+   width: 26px;
+   height: 26px;
+   position: relative;
+   vertical-align: middle;
+   margin-right: 4px;
+   border-radius: 50%;
+   background-color: #ffffff;
+}
+
+.playlists__input:before {
+   content: '';
+   position: absolute;
+   background: var(--color-white);
+   /* box-shadow: 0px 0px 5px rgba(30, 13, 68, 0.8); */
+   border: 7px solid var(--color-blue-purple);
+   opacity: 0;
+   top: -2px;
+   right: -2px;
+   bottom: -2px;
+   left: -2px;
+   border-radius: 50%;
+   transition: 0.3s ease-in-out;
+}
+
+.playlist-genre__item input:checked+.playlists__input:before {
+   opacity: 1;
+}
+
+.playlists-content {
+   flex-direction: column;
+   max-width: 350px;
+   padding-top: 28px;
+   color: var(--color-gray);
+   border-top: 1px solid var(--color-ligt-gray);
+}
+
+.playlists__descr {}
+
+.playlists__info {
+   margin-bottom: 6px;
+}
+
+.playlists__age {}
+
+.playlist-album {
+      width: 60%;
+}
+
+.playlist-album__item {}
+
+.playlist-album__flag {}
+
+.playlist-album__foto {}
+
+.playlist-album__title {}
+
+.playlist-album__cont {}
+
+/* ---------------------------------------------------------------------------------- */
 /*! MODAL */
 .modal {
    position: fixed;

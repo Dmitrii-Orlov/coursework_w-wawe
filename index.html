@@ -5233,64 +5233,74 @@
          </div>
       </section>
       <section id="_playlists" class="playlists">
-         <div class="container">
-            <h2 class="playlists__title">
-               Плейлисты
-            </h2>
-            <h3 class="playlists__subtitle">
-               Жанры
-            </h3>
-            <ul class="list-reset playlist-genre">
-               <li class="playlist-genre__item">
-                  <label for="genre_1">
-                     <input class="playlists__input" type="radio" name="genre" id="genre_1" value="Постпанк" checked>
-                     <span>Постпанк</span>
-                  </label>
-               </li>
-               <li class="playlist-genre__item">
-                  <label for="genre_2">
-                     <input class="playlists__input" type="radio" name="genre" id="genre_2" value="Хардкор">
-                     <span>Хардкор</span>
-                  </label>
-               </li>
-               <li class="playlist-genre__item">
-                  <label for="genre_3">
-                     <input class="playlists__input" type="radio" name="genre" id="genre_3" value="Панк-рок">
-                     <span>Панк-рок</span>
-                  </label>
-               </li>
-               <li class="playlist-genre__item">
-                  <label for="genre_4">
-                     <input class="playlists__input" type="radio" name="genre" id="genre_4" value="Рок">
-                     <span>Рок</span>
-                  </label>
-               </li>
-               <li class="playlist-genre__item">
-                  <label for="genre_5">
-                     <input class="playlists__input" type="radio" name="genre" id="genre_5" value="Прогрессивный рок">
-                     <span>Прогрессивный рок</span>
-                  </label>
-               </li>
-               <li class="playlist-genre__item">
-                  <label for="genre_6">
-                     <input class="playlists__input" type="radio" name="genre" id="genre_6" value="Электронная музыка">
-                     <span>Электронная музыка</span>
-                  </label>
-               </li>
-               <li class="playlist-genre__item">
-                  <label for="genre_7">
-                     <input class="playlists__input" type="radio" name="genre" id="genre_7" value="Классическая музыка">
-                     <span>Классическая музыка</span>
-                  </label>
-               </li>
-               <li class="playlist-genre__item">
-                  <label for="genre_8">
-                     <input class="playlists__input" type="radio" name="genre" id="genre_8"
-                        value="Звуки природы и&nbsp;шум города">
-                     <span>Звуки природы и&nbsp;шум города</span>
-                  </label>
-               </li>
-            </ul>
+         <div class="container playlists-container">
+            <div class="playlists-menu">
+               <h2 class="playlists__title">
+                  Плейлисты
+               </h2>
+               <h3 class="playlists__subtitle">
+                  Жанры
+               </h3>
+               <ul class="list-reset playlist-genre">
+                  <li class="playlist-genre__item">
+                     <label class="playlist-genre__label" for="genre_1" data-path="album_1">
+                        <input type="radio" name="genre" id="genre_1" value="Постпанк" checked>
+                        <div class="playlists__input"></div>
+                        <span>Постпанк</span>
+                     </label>
+                  </li>
+                  <li class="playlist-genre__item">
+                     <label class="playlist-genre__label" for="genre_2">
+                        <input type="radio" name="genre" id="genre_2" value="Хардкор">
+                        <div class="playlists__input"></div>
+                        <span>Хардкор</span>
+                     </label>
+                  </li>
+                  <li class="playlist-genre__item">
+                     <label class="playlist-genre__label" for="genre_3">
+                        <input type="radio" name="genre" id="genre_3" value="Панк-рок">
+                        <div class="playlists__input"></div>
+                        <span>Панк-рок</span>
+                     </label>
+                  </li>
+                  <li class="playlist-genre__item">
+                     <label class="playlist-genre__label" for="genre_4">
+                        <input type="radio" name="genre" id="genre_4" value="Рок">
+                        <div class="playlists__input"></div>
+                        <span>Рок</span>
+                     </label>
+                  </li>
+                  <li class="playlist-genre__item">
+                     <label class="playlist-genre__label" for="genre_5">
+                        <input type="radio" name="genre" id="genre_5" value="Прогрессивный рок">
+                        <div class="playlists__input"></div>
+                        <span>Прогрессивный рок</span>
+                     </label>
+                  </li>
+                  <li class="playlist-genre__item">
+                     <label class="playlist-genre__label" for="genre_6">
+                        <input class="playlist-genre__label" type="radio" name="genre" id="genre_6"
+                           value="Электронная музыка">
+                        <div class="playlists__input"></div>
+                        <span>Электронная музыка</span>
+                     </label>
+                  </li>
+                  <li class="playlist-genre__item">
+                     <label class="playlist-genre__label" for="genre_7">
+                        <input type="radio" name="genre" id="genre_7" value="Классическая музыка">
+                        <div class="playlists__input"></div>
+                        <span>Классическая музыка</span>
+                     </label>
+                  </li>
+                  <li class="playlist-genre__item">
+                     <label class="playlist-genre__label" for="genre_8">
+                        <input type="radio" name="genre" id="genre_8" value="Звуки природы и&nbsp;шум города">
+                        <div class="playlists__input"></div>
+                        <span>Звуки природы и&nbsp;шум города</span>
+                     </label>
+                  </li>
+               </ul>
+            </div>
             <div class="playlists-content flex">
                <p class="playlists__descr">
                   Раздел &laquo;Плейлисты&raquo; может содержать информацию, не&nbsp;предназначенную для
@@ -5308,7 +5318,92 @@
                   </svg>
                </span>
             </div>
-            <ul class="list-reset playlist__album">
+            <ul class="list-reset playlist-album flex" data-target="album_1">
+               <li class="playlist-album__item">
+                  <div class="playlist-album__flag">
+                     <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="20" fill="#121723" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 4H20V16H4V4Z" fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 8H20V16H4V8Z" fill="#0039A6" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12H20V16H4V12Z" fill="#D52B1E" />
+                     </svg>
+                  </div>
+                  <img class="playlist-album__foto" src="img/playlist/album_1_1.jpg" alt="фото альбома">
+                  <h3 class="playlist-album__title">
+                     Ploho
+                  </h3>
+                  <span class="playlist-album__cont">
+                     3&nbsp;последних альбома
+                  </span>
+               </li>
+               <li class="playlist-album__item">
+                  <div class="playlist-album__flag">
+                     <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="20" fill="#121723" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 4H20V16H4V4Z" fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 8H20V16H4V8Z" fill="#0039A6" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12H20V16H4V12Z" fill="#D52B1E" />
+                     </svg>
+                  </div>
+                  <img class="playlist-album__foto" src="img/playlist/album_1_1.jpg" alt="фото альбома">
+                  <h3 class="playlist-album__title">
+                     Ploho
+                  </h3>
+                  <span class="playlist-album__cont">
+                     3&nbsp;последних альбома
+                  </span>
+               </li>
+               <li class="playlist-album__item">
+                  <div class="playlist-album__flag">
+                     <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="20" fill="#121723" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 4H20V16H4V4Z" fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 8H20V16H4V8Z" fill="#0039A6" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12H20V16H4V12Z" fill="#D52B1E" />
+                     </svg>
+                  </div>
+                  <img class="playlist-album__foto" src="img/playlist/album_1_1.jpg" alt="фото альбома">
+                  <h3 class="playlist-album__title">
+                     Ploho
+                  </h3>
+                  <span class="playlist-album__cont">
+                     3&nbsp;последних альбома
+                  </span>
+               </li>
+               <li class="playlist-album__item">
+                  <div class="playlist-album__flag">
+                     <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="20" fill="#121723" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 4H20V16H4V4Z" fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 8H20V16H4V8Z" fill="#0039A6" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12H20V16H4V12Z" fill="#D52B1E" />
+                     </svg>
+                  </div>
+                  <img class="playlist-album__foto" src="img/playlist/album_1_1.jpg" alt="фото альбома">
+                  <h3 class="playlist-album__title">
+                     Ploho
+                  </h3>
+                  <span class="playlist-album__cont">
+                     3&nbsp;последних альбома
+                  </span>
+               </li>
+               <li class="playlist-album__item">
+                  <div class="playlist-album__flag">
+                     <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="20" fill="#121723" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 4H20V16H4V4Z" fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 8H20V16H4V8Z" fill="#0039A6" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12H20V16H4V12Z" fill="#D52B1E" />
+                     </svg>
+                  </div>
+                  <img class="playlist-album__foto" src="img/playlist/album_1_1.jpg" alt="фото альбома">
+                  <h3 class="playlist-album__title">
+                     Ploho
+                  </h3>
+                  <span class="playlist-album__cont">
+                     3&nbsp;последних альбома
+                  </span>
+               </li>
                <li class="playlist-album__item">
                   <div class="playlist-album__flag">
                      <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
