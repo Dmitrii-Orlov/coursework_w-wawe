@@ -189,26 +189,7 @@ podcastBtn.forEach(function (el) {
 //   });
 // });
 
-//! свипер
-// const swiper = new Swiper('.swiper', {
-//   slidesPerView: 1,
-//   loop: true,
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-//   a11y: {
-//     paginationBulletMessage: 'слайд проекта {{index}}',
-//   },
 
-//   //   navigation: {
-//   //   nextEl: '.swiper-button-next',
-//   //   prevEl: '.swiper-button-prev',
-//   // },
-//   // scrollbar: {
-//   //   el: '.swiper-scrollbar',
-//   // },
-// });
 
 //! АККОРДИОН
 let tabsBtn = document.querySelectorAll('.guest-item__btn');
@@ -260,4 +241,61 @@ document.querySelector('.podcast-btn__still').addEventListener('click', function
 });
 // ----------------------------------------
 
+//! СЛАЙДЕР
+const swiper = new Swiper('.we-swiper', {
+      // loop: true,
+   navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+   },
+   keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+   },
+   mousewheel: {
+      invert: true,
+   },
+   breakpoints: {
+      // when window width is >= 320px
+      320: {
+         slidesPerView: 2.2,
+         spaceBetween: 20,
+            },
+      
+      768: {
+         slidesPerView: 2,
+         spaceBetween: 30,
+             },
+       1024: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+             }
+   }
+});
 
+// swiper element
+// const swiperEl = document.querySelector('swiper-container');
+
+// // swiper parameters
+// const swiperParams = {
+//    slidesPerView: 1,
+//    breakpoints: {
+//       640: {
+//          slidesPerView: 2,
+//       },
+//       1024: {
+//          slidesPerView: 3,
+//       },
+//    },
+//    on: {
+//       init() {
+//          // ...
+//       },
+//    },
+// };
+
+// // now we need to assign all parameters to Swiper element
+// Object.assign(swiperEl, swiperParams);
+
+// // and now initialize it
+// swiperEl.initialize();
