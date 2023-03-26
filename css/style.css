@@ -1904,16 +1904,27 @@ body {
 }
 
 .we-form {
-   /* flex-direction: column; */
+   width: 80%;
 }
 
 .we-form__content {
-   flex-direction: column;
 }
 
-.we-form__input {}
+.we-form__contact {
+   justify-content: space-between;
+}
 
-.we-form__input--size {}
+.we-form__input {
+   width: calc((100% - var(--gap30)) / 2);
+}
+
+.we-form__input:not(:last-child) {
+   margin-right: var(--gap30);
+}
+
+.we-form__text {
+   width: 100%;
+}
 
 .we-form__btn {}
 

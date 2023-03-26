@@ -5699,11 +5699,13 @@
                </div>
             </div>
             <div class="we-form">
-               <form class="we-form__content flex" aria-label="форма - что скажите?" action="#">
-                  <textarea class="we-form__input we-form__input--size" name="message" cols="120"
-                     rows="8" placeholder="Что скажите?"></textarea>
-                  <input class="we-form__input" type="text" placeholder="Bvz">
-                  <input class="we-form__input" type="email" placeholder="Email">
+               <form class="we-form__content" aria-label="форма - что скажите?" action="#">
+                  <textarea class=" we-form__text" name="message" 
+                     placeholder="Что скажите?"></textarea>
+                  <div class="we-form__contact flex">
+                     <input class="we-form__input" type="text" placeholder="Имя">
+                     <input class="we-form__input" type="email" placeholder="Email">
+                  </div>
                   <div class="we-form__btn">
                      <button class="btn-reset btn-blue we-form__btn">
                         Отправить
@@ -5711,7 +5713,7 @@
                      <label class="we-check flex">
                         <input class="we-check__input visually-hidden" type="checkbox" checked>
                         <span class="we-check__box"></span>
-                     Согласен на&nbsp;обработку персональных данных
+                        Согласен на&nbsp;обработку персональных данных
                      </label>
                   </div>
                </form>
