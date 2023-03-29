@@ -243,7 +243,7 @@ document.querySelector('.podcast-btn__still').addEventListener('click', function
 
 //! СЛАЙДЕР
 const swiper = new Swiper('.we-swiper', {
-      // loop: true,
+   // loop: true,
    navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -255,47 +255,107 @@ const swiper = new Swiper('.we-swiper', {
    mousewheel: {
       invert: true,
    },
+   slidesPerView: 4,
+   spaceBetween: 30,
    breakpoints: {
-      // when window width is >= 320px
       320: {
-         slidesPerView: 2.2,
+         slidesPerView: 2.31,
          spaceBetween: 20,
-            },
-      
+      },
+
+      481: {
+         slidesPerView: 2,
+         spaceBetween: 20,
+      },
+
       768: {
          slidesPerView: 2,
          spaceBetween: 30,
-             },
-       1024: {
-          slidesPerView: 4,
-          spaceBetween: 30,
-             }
+      },
+
+      1025: {
+         slidesPerView: 3,
+         spaceBetween: 30
+      },
+
+      1280: {
+         slidesPerView: 4,
+         spaceBetween: 30
+      }
    }
 });
 
-// swiper element
-// const swiperEl = document.querySelector('swiper-container');
+//! Валидация формы
+const validation = new JustValidate('.we-form__cont', {
+   errorLabelCssClass: 'is-label-invalid',
+   color: '#D52B1E',
+});
+validation
+   .addField('.text', [
+      {
+         rule: 'minLength',
+         value: 5,
+              errorMessage: "Введите текст"
+      }
+   ])
+   .addField('.name', [
+      {
+         rule: 'minLength',
+         value: 2,
+         errorMessage: "Не ввели имя"
+      },
+      {
+         rule: 'maxLength',
+         value: 15,
+         errorMessage: "Длинное имя "
+      }
+   ])
+   .addField('.mail', [{
+      rule: 'required',
+      errorMessage: 'Не введен E-mail'
+   },
+   {
+      rule: 'email',
+      errorMessage: 'Вы не корректно ввели E-mail'
+   }
+   ]);
 
-// // swiper parameters
-// const swiperParams = {
-//    slidesPerView: 1,
-//    breakpoints: {
-//       640: {
-//          slidesPerView: 2,
+// new JustValidate('.section-about-us__form', {
+//    rules: {
+//       name: {
+//          required: true,
+//          minLength: 2,
+//          maxLength: 40
 //       },
-//       1024: {
-//          slidesPerView: 3,
+//       mail: {
+//          required: true,
+//          email: true
+//       },
+//       text: {
+//          required: true,
+//          minLength: 10,
+//       },
+//       check: {
+//          required: true,
 //       },
 //    },
-//    on: {
-//       init() {
-//          // ...
+
+//    messages: {
+//       name: {
+//          required: 'Вы не ввели  имя',
+//          minLength: 'Имя короткое',
+//          maxLength: 'Имя длиннное'
 //       },
-//    },
-// };
-
-// // now we need to assign all parameters to Swiper element
-// Object.assign(swiperEl, swiperParams);
-
-// // and now initialize it
-// swiperEl.initialize();
+//       mail: {
+//          required: 'Вы не ввели e-mail',
+//          email: 'e-mail введен не верно',
+//       },
+//       text: {
+//          required: 'Вы не ввели текст',
+//          minLength: 'Текст слишком короткий'
+//       },
+//       check: {
+//          required: 'Вы не подтвердили согласие'
+//       }
+//    }
+// });
