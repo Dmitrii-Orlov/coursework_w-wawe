@@ -295,67 +295,53 @@ validation
       {
          rule: 'minLength',
          value: 5,
-              errorMessage: "Введите текст"
+         errorMessage: "Введите текст"
       }
    ])
    .addField('.name', [
       {
          rule: 'minLength',
          value: 2,
-         errorMessage: "Не ввели имя"
+         errorMessage: "Не введено имя"
       },
       {
          rule: 'maxLength',
          value: 15,
-         errorMessage: "Длинное имя "
+         errorMessage: "Длинное имя"
       }
    ])
-   .addField('.mail', [{
-      rule: 'required',
-      errorMessage: 'Не введен E-mail'
-   },
-   {
-      rule: 'email',
-      errorMessage: 'Вы не корректно ввели E-mail'
-   }
+   // .addField('.name', [
+   //    {
+   //       rule: 'pattern',
+   //       value: '^[A-Za-zА-Яа-яЁё\s]{6,}',
+   //       errorMessage: "Ошибка"
+   //    }
+   // ])
+   .addField('.mail', [
+      {
+         rule: 'required',
+         errorMessage: 'Не введен E-mail'
+      },
+      {
+         rule: 'email',
+         errorMessage: 'Не корректно введен E-mail'
+      }
+   ])
+   .addField('.check', [
+      {
+         rule: 'required',
+         errorMessage: "Не отмечено согласие"
+      }
    ]);
 
-// new JustValidate('.section-about-us__form', {
-//    rules: {
-//       name: {
-//          required: true,
-//          minLength: 2,
-//          maxLength: 40
-//       },
-//       mail: {
-//          required: true,
-//          email: true
-//       },
-//       text: {
-//          required: true,
-//          minLength: 10,
-//       },
-//       check: {
-//          required: true,
-//       },
-//    },
-
-//    messages: {
-//       name: {
-//          required: 'Вы не ввели  имя',
-//          minLength: 'Имя короткое',
-//          maxLength: 'Имя длиннное'
-//       },
-//       mail: {
-//          required: 'Вы не ввели e-mail',
-//          email: 'e-mail введен не верно',
-//       },
-//       text: {
-//          required: 'Вы не ввели текст',
-//          minLength: 'Текст слишком короткий'
-//       },
-//       check: {
-//          required: 'Вы не подтвердили согласие'
-//       }
-//    }
-// });
+function allLetter(uname) {
+   var letters = /^[A-Za-z]+$/;
+   if (uname.value.match(letters)) {
+      return true;
+   }
+   else {
+      alert('Username must have alphabetcharactersonly');
+      uname.focus();
+      return false;
+   }
+}
