@@ -188,6 +188,7 @@ body {
    color: var(--color-deep-purple);
    background: none;
 }
+
 /* --------------------------------------------------------------------- */
 
 /*! HEADER */
@@ -234,9 +235,9 @@ body {
 
 .header-nav {
    margin-left: auto;
-   max-width: 638px;
-   width: 100%;
-   margin-right: 5%;
+   /* max-width: 607px; */
+   width: 58%;
+   margin-right: 7%;
 }
 
 .header-nav__list {
@@ -247,37 +248,12 @@ body {
 .header-nav__item {
    font-size: 20px;
    line-height: 20px;
+   /* margin-right: -5%; */
+   color: var(--color-blue-dark);
 }
-
-/* 
-.header-nav__link,
-.nav-bottom__link {
-   padding: 3px 6px;
-   margin: -3px -6px;
-   transition: background-color 0.3s ease-in-out,
-      color 0.3s ease-in-out;
-}
-
-.header-nav__link:focus,
-.nav-bottom__link:focus {
-   color: var(--color-white);
-   background-color: var(--color-blue-bluebell);
-}
-
-.header-nav__link:hover,
-.nav-bottom__link:hover {
-   color: var(--color-blue-purple);
-   background: none;
-}
-
-.header-nav__link:active,
-.nav-bottom__link:active {
-   color: var(--color-deep-purple);
-   background: none;
-} */
 
 .header-lens {
-   margin-right: 30px;
+   margin-right: 20px;
 }
 
 .header-search {
@@ -496,6 +472,7 @@ body {
    color: var(--color-blue);
    outline: none;
 }
+
 /* ------------------------------------------------------------------------- */
 
 /*! HERO */
@@ -521,13 +498,13 @@ body {
 .hero-descr__text {
    font-size: 16px;
    line-height: 150%;
-   margin-bottom: 20px;
+   margin-bottom: 42px;
    color: var(--color-blue-dark);
 }
 
 .hero-descr__btn {
    align-self: flex-start;
-   margin-top: auto;
+   /* margin-top: auto; */
    transition: background-color 0.3s ease-in-out,
       border 0.3s ease-in-out;
 }
@@ -550,7 +527,7 @@ body {
    min-width: 256px;
    width: 100%;
    height: 100%;
-   margin: -54px 0;
+   margin: -66px 0;
    flex-basis: content;
 }
 
@@ -577,10 +554,11 @@ body {
 
 .podcast {
    width: 50%;
+   height: 140px;
    display: none;
    padding-right: 15px;
    padding-left: 15px;
-   margin-bottom: 30px;
+   margin-bottom: var(--gap30);
    position: relative;
 }
 
@@ -599,6 +577,8 @@ body {
 .podcast__date {
    position: absolute;
    bottom: 0;
+   font-size: 10px;
+   line-height: 10px;
    padding: 3px 6px;
    background-color: var(--color-gray-light);
 }
@@ -659,7 +639,7 @@ body {
 }
 
 .podcast-btn {
-   padding-top: 30px;
+   padding-top: 26px;
    justify-content: center;
 }
 
@@ -804,6 +784,7 @@ body {
 
 .broadcast {
    margin: -15px;
+   padding-top: 13px;
 }
 
 .broadcast--visible {
@@ -869,7 +850,7 @@ body {
 }
 
 .broadcast__title {
-   margin-bottom: 4px;
+   margin-bottom: 2px;
    font-size: 20px;
    line-height: 20px;
 }
@@ -952,10 +933,15 @@ body {
    margin-bottom: 24px;
 }
 
+.broadcast-archive__descr {
+   font-size: 16px;
+   line-height: 150%;
+}
+
 .broadcast-archive__link {
    position: relative;
    align-items: center;
-   padding: 12px 56px;
+   padding: 10px 54px;
    font-size: 16px;
    line-height: 16px;
    margin-bottom: 12px;
@@ -1186,7 +1172,7 @@ body {
 .item-btn__title {
    padding: 0;
    font-weight: 500;
-   font-size: 20px;
+   font-size: 22px;
    line-height: 20px;
 }
 
@@ -1198,15 +1184,13 @@ body {
 }
 
 .guest-item__name {
-   margin-bottom: 16px;
+   font-size: 16px;
+   margin-bottom: 9px;
 }
 
 .guest-item__btn {
    text-align: start;
-   font-weight: 400;
-   font-size: 16px;
-   line-height: 16px;
-   color: var(--color-white);
+    color: var(--color-white);
    transition: color 0.3s ease-in-out;
 }
 
@@ -1228,6 +1212,13 @@ body {
    max-width: 350px;
    width: 100%;
 }
+.guest-content__img {
+margin-bottom: 15px;
+}
+
+.guest-content__img img {
+   vertical-align: top;
+}
 
 .guest-content--active {
    display: flex;
@@ -1238,11 +1229,11 @@ body {
 }
 
 .guest-social {
-   margin-bottom: 14px;
+   margin-bottom: 5px;
 }
 
 .guest-social__icon {
-   margin-right: 14px;
+   margin-right: var(--gap30);
    transition: fill 0.3s ease-in-out;
 }
 
@@ -1338,7 +1329,10 @@ body {
 
 .ui-accordion .ui-accordion-header {
    display: flex;
-   padding: 34px 0;
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 20px;
+   padding: 23px 0;
    margin: 0;
    border-top: 1px solid var(--color-gray);
    background: none;
@@ -2123,7 +2117,7 @@ body {
 .footer-bottom {
    background-image: url(../img/footer_wawe.svg);
    background-position: top;
-    background-repeat: no-repeat;
+   background-repeat: no-repeat;
    background-repeat: repeat-x;
    text-align: center;
    padding: 22px 0 10px;
