@@ -157,7 +157,7 @@ body {
 }
 
 .btn-blue {
-   padding: 25px 54px;
+   padding: 24px 52px;
    font-weight: 500;
    font-size: 20px;
    line-height: 20px;
@@ -272,7 +272,7 @@ body {
 
 .header-search-open {
    position: absolute;
-   right: 138px;
+   right: 128px;
    z-index: -1;
    opacity: 0;
    visibility: hidden;
@@ -472,7 +472,6 @@ body {
    color: var(--color-blue);
    outline: none;
 }
-
 /* ------------------------------------------------------------------------- */
 
 /*! HERO */
@@ -488,8 +487,7 @@ body {
 }
 
 .hero-descr__title {
-   margin-bottom: 14px;
-   font-weight: 400;
+   margin-bottom: 10px;
    font-size: 60px;
    line-height: 100%;
    color: var(--color-blue-dark);
@@ -498,7 +496,7 @@ body {
 .hero-descr__text {
    font-size: 16px;
    line-height: 150%;
-   margin-bottom: 42px;
+   margin-bottom: 44px;
    color: var(--color-blue-dark);
 }
 
@@ -1184,13 +1182,14 @@ body {
 }
 
 .guest-item__name {
-   font-size: 16px;
    margin-bottom: 9px;
 }
 
 .guest-item__btn {
    text-align: start;
-    color: var(--color-white);
+   font-size: 16px;
+   line-height: 16px;
+   color: var(--color-white);
    transition: color 0.3s ease-in-out;
 }
 
@@ -1212,8 +1211,9 @@ body {
    max-width: 350px;
    width: 100%;
 }
+
 .guest-content__img {
-margin-bottom: 15px;
+   margin-bottom: 12px;
 }
 
 .guest-content__img img {
@@ -1257,7 +1257,7 @@ margin-bottom: 15px;
    font-weight: 500;
    font-size: 20px;
    line-height: 20px;
-   margin-bottom: 8px;
+   margin-bottom: 10px;
    color: var(--color-white);
 }
 
@@ -1272,7 +1272,7 @@ margin-bottom: 15px;
 .guest-content__btn {
    position: relative;
    align-items: center;
-   padding: 12px 20px;
+   padding: 10px 18px;
    color: var(--color-blue-bluebell);
    background: none;
    border: 2px solid var(--color-blue-bluebell);
@@ -1329,10 +1329,11 @@ margin-bottom: 15px;
 
 .ui-accordion .ui-accordion-header {
    display: flex;
+   height: 90px;
    font-weight: 500;
    font-size: 20px;
    line-height: 20px;
-   padding: 23px 0;
+   padding: 0;
    margin: 0;
    border-top: 1px solid var(--color-gray);
    background: none;
@@ -1374,7 +1375,7 @@ margin-bottom: 15px;
 }
 
 .ui-accordion .ui-accordion-content {
-   padding: 30px 0;
+   padding: 28px 0;
    background: none;
 }
 
@@ -1396,7 +1397,7 @@ margin-bottom: 15px;
 /*! ПЛЕЙЛИСТЫ  */
 .playlists-menu {
    min-width: 350px;
-   margin-right: 34px;
+   margin-right: var(--gap30);
 }
 
 .playlists-menu__title {
@@ -1424,7 +1425,7 @@ margin-bottom: 15px;
 
 .playlist-genre__item {
    display: flex;
-   margin-bottom: 20px;
+   margin-bottom: 16px;
 }
 
 .playlist-genre__item span {
@@ -1452,7 +1453,7 @@ margin-bottom: 15px;
    height: 26px;
    position: relative;
    vertical-align: middle;
-   margin-right: 4px;
+   margin-right: 10px;
    border-radius: 50%;
    transition: background-color 0.3s ease-in-out,
       border 0.3s ease-in-out;
@@ -1490,22 +1491,28 @@ margin-bottom: 15px;
 .playlists-content {
    flex-direction: column;
    max-width: 350px;
-   padding-top: 28px;
+   width: 100%;
+   padding-top: 40px;
    color: var(--color-gray);
    border-top: 1px solid var(--color-ligt-gray);
 }
 
-.playlists-content__descr {}
+.playlists-content__descr {
+   font-size: 16px;
+   line-height: 22px;
+}
 
 .playlists-content__info {
-   margin-bottom: 6px;
+   margin-bottom: 10px;
 }
 
 .playlists-content__age {}
 
 .playlist-album {
-   width: 68%;
-   margin: -15px;
+   max-width: 760px;
+   margin-right: -15px;
+   margin-bottom: -15px;
+   margin-left: -15px;
 }
 
 .playlist-album__item {
@@ -1520,6 +1527,7 @@ margin-bottom: 15px;
 }
 
 .playlist-album__foto {
+   max-width: 160px;
    width: 100%;
    background-color: #121723;
    opacity: 0.8;
@@ -1588,7 +1596,7 @@ margin-bottom: 15px;
 }
 
 .playlist-album__descr {
-   padding: 16px;
+   padding: 13px 15px;
 }
 
 .playlist-album__cont {
@@ -1596,6 +1604,10 @@ margin-bottom: 15px;
    font-size: 12px;
    line-height: 12px;
    color: var(--color-gray);
+}
+
+.playlist-album__title {
+   margin-bottom: 10px;
 }
 
 .playlist-album__item .playlist-album__descr {
@@ -1637,7 +1649,7 @@ margin-bottom: 15px;
    font-size: 16px;
    line-height: 16px;
    color: var(--color-blue-dark);
-   margin-bottom: 4px;
+   margin-bottom: 3px;
 }
 
 /* ----------------------------------------------------------------------------------- */
@@ -1654,21 +1666,23 @@ margin-bottom: 15px;
 }
 
 .market-priduct__radio {
-
-   width: 100%;
+   margin-top: 10px;
+   margin-left: -5px;
+   max-width: 640px;
 }
 
 .market-priduct__new {
    position: absolute;
-   width: 26%;
-   left: 0;
-   top: -8px;
+   width: 25%;
+   left: -5px;
+   top: 0px;
 }
 
 .market-content {
    flex-direction: column;
    height: fit-content;
    max-width: 445px;
+   margin-bottom: 40px;
 }
 
 .market-content__title {
@@ -1693,7 +1707,7 @@ margin-bottom: 15px;
    font-size: 16px;
    line-height: 180%;
    color: var(--color-white);
-   padding-bottom: 12px;
+   padding-bottom: 13px;
 }
 
 .market-content__descr:last-child {
@@ -1711,7 +1725,7 @@ margin-bottom: 15px;
 .market-content__link {
    align-items: flex-end;
    align-self: flex-start;
-   padding: 25px 14px;
+   padding: 22px 10px;
    font-weight: 500;
    font-size: 20px;
    line-height: 100%;
@@ -1807,6 +1821,11 @@ margin-bottom: 15px;
    color: var(--color-gray);
 }
 
+.we-svg {
+   align-items: center;
+   height: 100%;
+}
+
 .we-svg__spring {
    max-width: 160px;
    margin: 0;
@@ -1855,19 +1874,19 @@ margin-bottom: 15px;
 
 .swiper-button-next,
 .swiper-button-prev {
-   top: 35%;
+   top: 32%;
    width: auto;
    height: auto;
 }
 
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-   right: -75px;
+   right: -78px;
 }
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-   left: -75px;
+   left: -78px;
 }
 
 .swiper-button-prev circle,
@@ -1900,7 +1919,7 @@ margin-bottom: 15px;
 }
 
 .we-form {
-   width: 80%;
+   width: 83%;
 }
 
 .we-form__cont {
@@ -1944,7 +1963,7 @@ margin-bottom: 15px;
    width: 100%;
    font-size: 20px;
    line-height: 20px;
-   padding: 25px 32px;
+   padding: 25px 30px;
    margin-bottom: var(--gap30);
    color: var(--color-gray);
    cursor: pointer;
@@ -2057,6 +2076,7 @@ margin-bottom: 15px;
 .footer-container {
    justify-content: space-between;
    background-color: var(--color-focus);
+   margin-bottom: -25px;
 }
 
 .footer-icon {
@@ -2064,7 +2084,7 @@ margin-bottom: 15px;
 }
 
 .footer-logo {
-   margin-bottom: 24px;
+   margin-bottom: 17px;
 }
 
 .footer-logo img {
@@ -2092,7 +2112,7 @@ margin-bottom: 15px;
 }
 
 .footer-social__icon {
-   margin-right: 25px;
+   margin-right: 21px;
 }
 
 .footer-nav {
@@ -2102,10 +2122,8 @@ margin-bottom: 15px;
 
 .footer-nav__list {
    column-count: 3;
-
+   width: 125%;
 }
-
-.list-reset {}
 
 .footer-nav__item {
    margin-bottom: 20px;
