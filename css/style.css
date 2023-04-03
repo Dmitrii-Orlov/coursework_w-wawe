@@ -189,6 +189,14 @@ body {
    background: none;
 }
 
+/* .svg-pause--active {
+   display: block;
+}
+
+.svg-play--hidden {
+   display: none;
+} */
+
 /* --------------------------------------------------------------------- */
 
 /*! HEADER */
@@ -472,6 +480,7 @@ body {
    color: var(--color-blue);
    outline: none;
 }
+
 /* ------------------------------------------------------------------------- */
 
 /*! HERO */
@@ -1924,17 +1933,13 @@ body {
 
 .we-form__cont {
    flex-direction: column;
-
 }
 
 .we-form__contact {
    justify-content: space-between;
 }
 
-.we-form__text {
-   /* margin-bottom: var(--gap30); */
-   /* margin: 0; */
-}
+.we-form__text {}
 
 .we-form__text .text {
    width: 100%;
@@ -1979,7 +1984,6 @@ body {
 .we-form__text:focus,
 .we-form__input:focus {
    background-color: var(--color-focus);
-
 }
 
 .we-form__text:hover text,
@@ -2050,25 +2054,7 @@ body {
    background-position: center;
 }
 
-.just-validate-error-label {
-   position: absolute;
-   padding-left: 32px;
-   margin-top: 12px;
-   font-size: 12px;
-   line-height: 12px;
-}
 
-.we-check+.just-validate-error-label {
-   position: absolute;
-   padding-left: 20px;
-   margin-top: -28px;
-}
-
-.we-form__text .just-validate-error-field,
-.just-validate-error-field {
-   border: 1px solid #D52B1E;
-   color: var(--color-white);
-}
 
 /* ---------------------------------------------------------------------------------- */
 
@@ -2248,6 +2234,15 @@ body {
    font-size: 20px;
    line-height: 150%;
    color: var(--color-blue-purple);
+   transition: color 0.3s ease-in-out;
+}
+
+.modal__link:hover {
+   color: var(--color-gray);
+}
+
+.modal__link:active {
+   color: var(--color-deep-purple);
 }
 
 .modal-form {
@@ -2257,8 +2252,28 @@ body {
    margin-bottom: var(--gap30);
 }
 
-.modal-form__input {
+
+.modal-form__wrapp {
+   position: relative;
    max-width: 526px;
+   width: 100%;
+}
+
+.is-label-invalid-modal {
+   position: absolute;
+   top: 0px;
+   left: -6px;
+   font-size: 12px;
+   line-height: 12px;
+}
+
+.modal-form__wrapp .is-invalid {
+      border: 1px solid #D52B1E;
+         color: var(--color-white);
+}
+
+.modal-form__input {
+   /* max-width: 526px; */
    width: 100%;
    padding: 25px;
    font-size: 20px;
@@ -2268,6 +2283,28 @@ body {
    border: 1px solid var(--color-white);
    border-radius: 40px;
    background-color: var(--color-blue-dark);
+   transition: color 0.3s ease-in-out,
+      background-color 0.3s ease-in-out,
+      border 0.3s ease-in-out;
+}
+
+.modal-form__input:focus {
+   background-color: var(--color-focus);
+}
+
+.modal-form__input:hover {
+   background-color: var(--color-focus);
+   border-color: var(--color-blue-bluebell);
+}
+
+.modal-form__input:active {
+   color: var(--color-white);
+   background: none;
+   border-color: var(--color-white);
+}
+
+.we-form__label .name {
+   margin-right: var(--gap30);
 }
 
 .modal-form__btn {
@@ -2330,3 +2367,33 @@ body {
 .modal-social__g:active svg rect {
    fill: var(--color-deep-purple);
 }
+
+.just-validate-error-label {
+   position: absolute;
+   padding-left: 32px;
+   margin-top: 12px;
+   font-size: 12px;
+   line-height: 12px;
+}
+
+.we-check+.just-validate-error-label {
+   position: absolute;
+   padding-left: 20px;
+   margin-top: -28px;
+}
+
+/* .we-form__text .just-validate-error-field,
+.just-validate-error-field {
+   border: 1px solid #D52B1E;
+   color: var(--color-white);
+} */
+
+.we-form__text .is-invalid,
+.we-form__label .is-invalid {
+   border: 1px solid #D52B1E;
+   color: var(--color-white);
+}
+
+
+
+

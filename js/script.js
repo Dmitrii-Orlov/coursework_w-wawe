@@ -285,63 +285,153 @@ const swiper = new Swiper('.we-swiper', {
    }
 });
 
-//! Валидация формы
-const validation = new JustValidate('.we-form__cont', {
-   errorLabelCssClass: 'is-label-invalid',
-   color: '#D52B1E',
-});
+//! Валидация форм
+const validation = new JustValidate('.we-form__cont',
+   {
+      errorFieldCssClass: 'is-invalid',
+      errorFieldStyle: {
+         border: '1px solid #D52B1E',
+      },
+      errorLabelCssClass: 'is-label-invalid',
+      errorLabelStyle: {
+         color: '#D52B1E',
+         textDecoration: 'underlined',
+      },
+      focusInvalidField: false,
+   },
+);
+
 validation
    .addField('.text', [
       {
-         rule: 'minLength',
-         value: 5,
-         errorMessage: "Введите текст"
-      }
-   ])
-   .addField('.name', [
+         rule: 'required',
+         errorMessage: 'Вы не ввели сообщение',
+      },
       {
          rule: 'minLength',
          value: 2,
-         errorMessage: "Не введено имя"
+         errorMessage: 'Сообщение содержит меньше двух символов',
+      },
+   ])
+   .addField('.name', [
+      {
+         rule: 'required',
+         errorMessage: 'Вы не ввели имя',
+      },
+      {
+         rule: 'minLength',
+         value: 2,
+         errorMessage: 'Имя содержит меньше двух символов',
       },
       {
          rule: 'maxLength',
-         value: 15,
-         errorMessage: "Длинное имя"
-      }
+         value: 30,
+         errorMessage: 'Имя содержит больше тридцати символов',
+      },
    ])
-   // .addField('.name', [
-   //    {
-   //       rule: 'pattern',
-   //       value: '^[A-Za-zА-Яа-яЁё\s]{6,}',
-   //       errorMessage: "Ошибка"
-   //    }
-   // ])
    .addField('.mail', [
       {
          rule: 'required',
-         errorMessage: 'Не введен E-mail'
+         errorMessage: 'Вы не ввели e-mail',
       },
       {
          rule: 'email',
-         errorMessage: 'Не корректно введен E-mail'
-      }
+         errorMessage: 'e-mail указан неверно!',
+      },
    ])
    .addField('.check', [
       {
          rule: 'required',
-         errorMessage: "Не отмечено согласие"
-      }
+         errorMessage: 'Обязательно',
+      },
    ]);
 
-function allLetter(uname) {
-   var letters = /^[A-Za-z]+$/;
-   if (uname.value.match(letters)) {
-      return true;
-   }
-   else {
-      alert('Username must have alphabetcharactersonly');
-      uname.focus();
-      return false;
-   }
-}
+const validationModal = new JustValidate('#modal-form',
+   {
+      errorFieldCssClass: 'is-invalid',
+      errorFieldStyle: {
+         border: '1px solid #D52B1E',
+      },
+      errorLabelCssClass: 'is-label-invalid-modal',
+      errorLabelStyle: {
+         color: '#D52B1E',
+         textDecoration: 'underlined',
+      },
+      focusInvalidField: false,
+   },
+);
+
+validationModal
+   .addField('#login', [
+      {
+         rule: 'required',
+         errorMessage: 'Вы не ввели логин',
+      },
+      {
+         rule: 'minLength',
+         value: 2,
+         errorMessage: 'Логин содержит меньше двух символов',
+      },
+   ])
+   .addField('#password', [
+      {
+         rule: 'required',
+         errorMessage: 'Вы не ввели пароль',
+      },
+      {
+         rule: 'minLength',
+         value: 6,
+         errorMessage: 'Пароль содержит меньше шести символов',
+      },
+   ]);
+
+
+const validationModal2 = new JustValidate('#modal-form-2',
+   {
+      errorFieldCssClass: 'is-invalid',
+      errorFieldStyle: {
+         border: '1px solid #D52B1E',
+      },
+      errorLabelCssClass: 'is-label-invalid-modal',
+      errorLabelStyle: {
+         color: '#D52B1E',
+         textDecoration: 'underlined',
+      },
+      focusInvalidField: false,
+   },
+);
+
+validationModal2
+   .addField('.login', [
+      {
+         rule: 'required',
+         errorMessage: 'Вы не ввели логин',
+      },
+      {
+         rule: 'minLength',
+         value: 2,
+         errorMessage: 'Логин содержит меньше двух символов',
+      },
+   ])
+   .addField('.password', [
+      {
+         rule: 'required',
+         errorMessage: 'Вы не ввели пароль',
+      },
+      {
+         rule: 'minLength',
+         value: 6,
+         errorMessage: 'Пароль содержит меньше шести символов',
+      },
+   ])
+   .addField('.password-2', [
+      {
+         rule: 'required',
+         errorMessage: 'Вы не ввели пароль',
+      },
+      {
+         rule: 'minLength',
+         value: 6,
+         errorMessage: 'Пароль содержит меньше шести символов',
+      },
+   ]);

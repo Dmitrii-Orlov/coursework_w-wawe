@@ -160,7 +160,7 @@
                <span class="ether__line"></span>
                <div class="ether-content flex">
                   <button class="btn-reset ether-content__btn flex">
-                     <svg class="ether-content__play" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     <svg class="ether-content__play" data-play="earlier" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_24531_5430)">
                            <path
@@ -173,7 +173,7 @@
                            </clipPath>
                         </defs>
                      </svg>
-                     <svg class="ether-content__pause" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     <svg class="ether-content__pause" data-pause="earlier" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_24531_3491)">
                            <path
@@ -5833,12 +5833,17 @@
                Если у&nbsp;вас ещё нет аккаунта,&nbsp;
                <a href="#modal2" class="modal__link modal-link">зарегистрируйтесь</a>
             </p>
-            <form aria-label="форма вход в аккаунт" class="modal-form flex" action="#">
-               <input class="modal-form__input" type="text" placeholder="Логин" required="">
-               <input class="modal-form__input" type="password" placeholder="Пароль" required="">
-               <a href="#" class="btn-blue modal-form__btn modal-link">
+            <form aria-label="форма вход в аккаунт" id="modal-form" class="modal-form flex" action=""
+               action="https://jsonplaceholder.typicode.com/posts" method="post" novalidate="novalidate">
+               <div class="modal-form__wrapp">
+                  <input class="modal-form__input" id="login" type="text" name="Логин" placeholder="Логин">
+               </div>
+               <div class="modal-form__wrapp">
+                  <input class="modal-form__input" id="password" type="password" name="Пароль" placeholder="Пароль">
+               </div>
+               <button class="btn-blue modal-form__btn">
                   Войти
-               </a>
+               </button>
             </form>
             <div class="modal-social">
                <p class="modal-social__info">Войти с&nbsp;помощью:</p>
@@ -5900,13 +5905,19 @@
                Если у&nbsp;вас есть аккаунт,&nbsp;
                <a href="#modal" class="modal__link modal-link">войдите</a>
             </p>
-            <form aria-label="форма вход в аккаунт" class="modal-form flex" action="#">
-               <input class="modal-form__input" type="text" placeholder="Логин" required="">
-               <input class="modal-form__input" type="password" placeholder="Пароль" required="">
-               <input class="modal-form__input" type="password" placeholder="Повторите пароль" required="">
-               <a href="#" class="btn-blue modal-form__btn modal-link">
+            <form aria-label="форма вход в аккаунт" id="modal-form-2" class="modal-form flex" action="#">
+               <div class="modal-form__wrapp">
+                  <input class="modal-form__input login" type="text" name="Логин" placeholder="Логин">
+               </div>
+               <div class="modal-form__wrapp">
+                  <input class="modal-form__input password" value="" type="password" name="Пароль" placeholder="Пароль">
+               </div>
+               <div class="modal-form__wrapp">
+                  <input class="modal-form__input password-2" value="" type="password" placeholder="Повторите пароль">
+               </div>
+               <button href="#" class="btn-blue modal-form__btn">
                   Зарегистрироваться
-               </a>
+               </button>
             </form>
          </div>
       </div>
@@ -5916,7 +5927,8 @@
    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-   <script src="libs/just-validate.min.js"></script>
+   <!-- <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script> -->
+   <script src="libs/just-validate.min — копия.js"></script>
    <script src="libs/inputmask.min.js"></script>
    <script src="js/script.js"></script>
 </body>
