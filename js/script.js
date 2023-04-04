@@ -413,7 +413,7 @@ validationModal2
          errorMessage: 'Логин содержит меньше двух символов',
       },
    ])
-   .addField('.password', [
+   .addField('.password1', [
       {
          rule: 'required',
          errorMessage: 'Вы не ввели пароль',
@@ -424,7 +424,7 @@ validationModal2
          errorMessage: 'Пароль содержит меньше шести символов',
       },
    ])
-   .addField('.password-2', [
+   .addField('.password2', [
       {
          rule: 'required',
          errorMessage: 'Вы не ввели пароль',
