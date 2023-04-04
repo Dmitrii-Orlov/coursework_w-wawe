@@ -189,14 +189,6 @@ body {
    background: none;
 }
 
-/* .svg-pause--active {
-   display: block;
-}
-
-.svg-play--hidden {
-   display: none;
-} */
-
 /* --------------------------------------------------------------------- */
 
 /*! HEADER */
@@ -317,19 +309,22 @@ body {
    margin-right: 5px;
 }
 
+
 .form-search-open .form-send path {
    transition: stroke 0.3s ease-in-out;
 }
 
-.form-search-open:focus .form-send path {
+.form-search-open:focus-visible path,
+.form-search-open:focus path {
    stroke: var(--color-blue-bluebell);
 }
 
-.form-search-open:hover .form-send path {
+
+.form-search-open:hover path {
    stroke: var(--color-blue-bluebell);
 }
 
-.form-search-open:active .form-send path {
+.form-search-open:active path {
    stroke: var(--color-deep-purple);
 }
 
@@ -396,9 +391,6 @@ body {
    color: var(--color-blue-dark);
 }
 
-.ether {
-   align-items: center;
-}
 
 .ether-content__pause {
    display: none;
@@ -417,18 +409,19 @@ body {
    align-items: center;
 }
 
-.ether-content__btn {
+.ether-content__btn path {
    align-items: center;
    padding-left: 12px;
    transition: fill 0.3s ease-in-out;
 }
 
-.ether-content__btn path:focus {
+.ether-content__btn:focus-visible path,
+.ether-content__btn:focus path {
    visibility: visible;
    fill: var(--color-blue-bluebell);
 }
 
-.ether-content__btn path:hover {
+.ether-content__btn:hover path {
    visibility: visible;
    fill: var(--color-blue-purple);
 }
@@ -684,47 +677,57 @@ body {
    display: flex;
 }
 
-.podcast-play__icon circle {
+.podcast-play .podcast-play__icon circle {
    transition: stroke 0.3s ease-in-out;
 }
 
-.podcast-play__icon path {
+.podcast-play .podcast-play__icon path {
    transition: fill 0.3s ease-in-out;
 }
 
-.podcast-play__icon:focus circle {
+.podcast-play:focus-visible .podcast-play__icon circle,
+.podcast-play:focus .podcast-play__icon circle {
    stroke: var(--color-blue-bluebell);
 }
 
-.podcast-play__icon:focus path {
+.podcast-play:focus-visible .podcast-play__icon path,
+.podcast-play:focus .podcast-play__icon path {
    fill: var(--color-blue-bluebell);
 }
+ 
 
-.podcast-play__icon:hover circle {
+.podcast-play:hover .podcast-play__icon circle {
    stroke: var(--color-blue-purple)
 }
 
-.podcast-play__icon:hover path {
+.podcast-play:hover .podcast-play__icon path,
+.podcast-play:hover .podcast-play__iconr rect {
    fill: var(--color-blue-purple)
 }
 
-.podcast-play__icon:active circle {
-   stroke: var(--color-deep-purple);
-}
-
-.podcast-play__icon:active path {
-   fill: var(--color-white);
-}
-
+/* .podcast-play:active svg,
 .podcast-play__icon:active {
    fill: var(--color-deep-purple);
 }
+
+.podcast-play:active circle,
+.podcast-play__icon:active circle {
+   stroke: var(--color-deep-purple)
+}
+
+.podcast-play:active svg,
+.podcast-play__icon:active path,
+.podcast-play__icon:active rect {
+   fill: var(--color-white);
+} */
+
 
 .podcast-descr__like svg,
 .podcast-descr__like svg path {
    transition: fill 0.3s ease-in-out;
 }
 
+.podcast-descr__like:focus-visible svg path,
 .podcast-descr__like:focus svg path {
    fill: var(--color-blue-bluebell);
 }
@@ -2268,8 +2271,8 @@ body {
 }
 
 .modal-form__wrapp .is-invalid {
-      border: 1px solid #D52B1E;
-         color: var(--color-white);
+   border: 1px solid #D52B1E;
+   color: var(--color-white);
 }
 
 .modal-form__input {
@@ -2393,7 +2396,3 @@ body {
    border: 1px solid #D52B1E;
    color: var(--color-white);
 }
-
-
-
-

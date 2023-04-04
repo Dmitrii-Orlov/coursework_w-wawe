@@ -55,8 +55,8 @@
             </div>
             <div class="header-search flex">
                <div class="header-lens">
-                  <button aria-label="поиск по сайту" class="btn-reset form-search-open flex">
-                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <button aria-label="поиск по сайту" class="btn-reset form-search-open flex">
+                     <svg   width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                            d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
                            stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -5709,10 +5709,10 @@
                   </label>
                   <div class="we-form__contact flex">
                      <label class="we-form__label flex">
-                        <input class="we-form__input name" type="text" name="Имя" placeholder="Имя">
+                        <input class="we-form__input name" type="text" name="Имя" placeholder="Имя" required>
                      </label>
                      <label class="we-form__label flex">
-                        <input class="we-form__input mail" type="email" name="email" placeholder="Email">
+                        <input class="we-form__input mail" type="email" name="email" placeholder="Email" required>
                      </label>
                   </div>
                   <div class="we-bottom">
@@ -5836,10 +5836,10 @@
             <form aria-label="форма вход в аккаунт" id="modal-form" class="modal-form flex" action=""
                action="https://jsonplaceholder.typicode.com/posts" method="post" novalidate="novalidate">
                <div class="modal-form__wrapp">
-                  <input class="modal-form__input" id="login" type="text" name="Логин" placeholder="Логин">
+                  <input class="modal-form__input" id="login" type="text" name="Логин" placeholder="Логин" required>
                </div>
                <div class="modal-form__wrapp">
-                  <input class="modal-form__input" id="password" type="password" name="Пароль" placeholder="Пароль">
+                  <input class="modal-form__input" id="password" type="password" name="Пароль" placeholder="Пароль" required>
                </div>
                <button class="btn-blue modal-form__btn">
                   Войти
@@ -5907,13 +5907,13 @@
             </p>
             <form aria-label="форма вход в аккаунт" id="modal-form-2" class="modal-form flex" action="#">
                <div class="modal-form__wrapp">
-                  <input class="modal-form__input login" type="text" name="Логин" placeholder="Логин">
+                  <input class="modal-form__input login" type="text" name="Логин" placeholder="Логин" required>
                </div>
                <div class="modal-form__wrapp">
-                  <input class="modal-form__input password" value="" type="password" name="Пароль" placeholder="Пароль">
+                  <input class="modal-form__input password" value="" type="password" name="Пароль" placeholder="Пароль" required>
                </div>
                <div class="modal-form__wrapp">
-                  <input class="modal-form__input password-2" value="" type="password" placeholder="Повторите пароль">
+                  <input class="modal-form__input password-2" value="" type="password" placeholder="Повторите пароль" required>
                </div>
                <button href="#" class="btn-blue modal-form__btn">
                   Зарегистрироваться
