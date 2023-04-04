@@ -133,7 +133,7 @@ document.querySelector(".form-search-open").addEventListener("click", function (
 document.addEventListener("click", function (e) {
    let target = e.target;
    let search = document.querySelector(".header-search-open");
-   if (!target.closest(".header-search")) {
+   if ( !target.closest('.form-search-open')) {
       search.classList.remove("header-search-open--active");
       search.querySelector("input").value = "";
       document.querySelector(".form-search-open").classList.remove("form-search-open--active")
@@ -413,7 +413,7 @@ validationModal2
          errorMessage: 'Логин содержит меньше двух символов',
       },
    ])
-   .addField('.password1', [
+   .addField('.password', [
       {
          rule: 'required',
          errorMessage: 'Вы не ввели пароль',
@@ -424,7 +424,7 @@ validationModal2
          errorMessage: 'Пароль содержит меньше шести символов',
       },
    ])
-   .addField('.password2', [
+   .addField('.password-2', [
       {
          rule: 'required',
          errorMessage: 'Вы не ввели пароль',

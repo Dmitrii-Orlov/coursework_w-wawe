@@ -189,14 +189,6 @@ body {
    background: none;
 }
 
-/* .svg-pause--active {
-   display: block;
-}
-
-.svg-play--hidden {
-   display: none;
-} */
-
 /* --------------------------------------------------------------------- */
 
 /*! HEADER */
@@ -225,6 +217,10 @@ body {
    height: 140px;
 }
 
+.header-logo {
+   cursor: auto;
+}
+
 .header-line {
    margin: 0;
    position: absolute;
@@ -243,7 +239,6 @@ body {
 
 .header-nav {
    margin-left: auto;
-   /* max-width: 607px; */
    width: 58%;
    margin-right: 7%;
 }
@@ -256,7 +251,6 @@ body {
 .header-nav__item {
    font-size: 20px;
    line-height: 20px;
-   /* margin-right: -5%; */
    color: var(--color-blue-dark);
 }
 
@@ -321,15 +315,16 @@ body {
    transition: stroke 0.3s ease-in-out;
 }
 
-.form-search-open:focus .form-send path {
+.form-search-open:focus-visible path,
+.form-search-open:focus path {
    stroke: var(--color-blue-bluebell);
 }
 
-.form-search-open:hover .form-send path {
+.form-search-open:hover path {
    stroke: var(--color-blue-bluebell);
 }
 
-.form-search-open:active .form-send path {
+.form-search-open:active path {
    stroke: var(--color-deep-purple);
 }
 
@@ -396,9 +391,6 @@ body {
    color: var(--color-blue-dark);
 }
 
-.ether {
-   align-items: center;
-}
 
 .ether-content__pause {
    display: none;
@@ -417,18 +409,19 @@ body {
    align-items: center;
 }
 
-.ether-content__btn {
+.ether-content__btn path {
    align-items: center;
    padding-left: 12px;
    transition: fill 0.3s ease-in-out;
 }
 
-.ether-content__btn path:focus {
+.ether-content__btn:focus-visible path,
+.ether-content__btn:focus path {
    visibility: visible;
    fill: var(--color-blue-bluebell);
 }
 
-.ether-content__btn path:hover {
+.ether-content__btn:hover path {
    visibility: visible;
    fill: var(--color-blue-purple);
 }
@@ -684,40 +677,46 @@ body {
    display: flex;
 }
 
-.podcast-play__icon circle {
+.podcast-play .podcast-play__icon circle {
    transition: stroke 0.3s ease-in-out;
 }
 
-.podcast-play__icon path {
+.podcast-play .podcast-play__icon path,
+.podcast-play .podcast-play__icon rect,
+.podcast-play .podcast-play__icon {
    transition: fill 0.3s ease-in-out;
 }
 
-.podcast-play__icon:focus circle {
+.podcast-play:focus-visible .podcast-play__icon circle,
+.podcast-play:focus .podcast-play__icon circle {
    stroke: var(--color-blue-bluebell);
 }
 
-.podcast-play__icon:focus path {
+.podcast-play:focus-visible .podcast-play__icon path,
+.podcast-play:focus .podcast-play__icon path {
    fill: var(--color-blue-bluebell);
 }
 
-.podcast-play__icon:hover circle {
+
+.podcast-play:hover .podcast-play__icon circle {
    stroke: var(--color-blue-purple)
 }
 
-.podcast-play__icon:hover path {
+.podcast-play:hover .podcast-play__icon path,
+.podcast-play:hover .podcast-play__icon rect {
    fill: var(--color-blue-purple)
 }
 
-.podcast-play__icon:active circle {
-   stroke: var(--color-deep-purple);
+.podcast-play:active .podcast-play__icon circle {
+   stroke: var(--color-deep-purple)
 }
 
-.podcast-play__icon:active path {
-   fill: var(--color-white);
+.podcast-play:active .podcast-play__icon {
+   fill: var(--color-deep-purple)
 }
 
-.podcast-play__icon:active {
-   fill: var(--color-deep-purple);
+.podcast-play:active .podcast-play__icon path {
+   fill: var(--color-white)
 }
 
 .podcast-descr__like svg,
@@ -725,6 +724,7 @@ body {
    transition: fill 0.3s ease-in-out;
 }
 
+.podcast-descr__like:focus-visible svg path,
 .podcast-descr__like:focus svg path {
    fill: var(--color-blue-bluebell);
 }
@@ -1335,7 +1335,6 @@ body {
    border-color: var(--color-deep-purple);
 }
 
-
 .ui-accordion .ui-accordion-header {
    display: flex;
    height: 90px;
@@ -1779,7 +1778,6 @@ body {
 
 .market-content__link:active .svg-back {
    fill: var(--color-blue-dark);
-
 }
 
 .market-content__link:active .svg-line {
@@ -1910,6 +1908,18 @@ body {
    transition: fill 0.3s ease-in-out;
 }
 
+.swiper-button-prev:focus svg,
+.swiper-button-next:focus svg {
+   fill: var(--color-deep-purple);
+
+}
+
+.swiper-button-prev:focus-visible,
+.swiper-button-next:focus-visible {
+   outline: none;
+   /* border: none; */
+}
+
 .swiper-button-prev:hover circle,
 .swiper-button-next:hover circle,
 .swiper-button-prev:hover path,
@@ -1984,12 +1994,12 @@ body {
 .we-form__text:focus,
 .we-form__input:focus {
    background-color: var(--color-focus);
+   border-color: var(--color-blue-bluebell);
 }
 
 .we-form__text:hover text,
 .we-form__input:hover {
    background-color: var(--color-focus);
-   border-color: var(--color-blue-bluebell);
 }
 
 .we-form__input:active {
@@ -2044,14 +2054,17 @@ body {
    border: 1px solid var(--color-white);
 }
 
-.we-check__input:focus+.we-check__box {
+.we-check__input:focus+.we-check__box,
+.we-check__input:focus:checked+.we-check__box {
    outline: 2px solid var(--color-blue-purple);
+   outline-offset: 2px;
 }
 
 .we-check__input:checked+.we-check__box {
    background-image: url(../img/check.svg);
    background-repeat: no-repeat;
    background-position: center;
+   outline: none;
 }
 
 
@@ -2071,6 +2084,7 @@ body {
 
 .footer-logo {
    margin-bottom: 17px;
+   cursor: auto;
 }
 
 .footer-logo img {
@@ -2268,8 +2282,8 @@ body {
 }
 
 .modal-form__wrapp .is-invalid {
-      border: 1px solid #D52B1E;
-         color: var(--color-white);
+   border: 1px solid #D52B1E;
+   color: var(--color-white);
 }
 
 .modal-form__input {
@@ -2393,7 +2407,3 @@ body {
    border: 1px solid #D52B1E;
    color: var(--color-white);
 }
-
-
-
-
