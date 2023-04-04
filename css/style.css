@@ -311,13 +311,10 @@ body {
    margin-right: 5px;
 }
 
-
 .form-search-open .form-send path {
    transition: stroke 0.3s ease-in-out;
 }
 
-.form-search-open:focus-visible path,
-.form-search-open:focus path {
 .form-search-open:focus-visible path,
 .form-search-open:focus path {
    stroke: var(--color-blue-bluebell);
@@ -327,7 +324,6 @@ body {
    stroke: var(--color-blue-bluebell);
 }
 
-.form-search-open:active path {
 .form-search-open:active path {
    stroke: var(--color-deep-purple);
 }
@@ -414,20 +410,17 @@ body {
 }
 
 .ether-content__btn path {
-.ether-content__btn path {
    align-items: center;
    padding-left: 12px;
    transition: fill 0.3s ease-in-out;
 }
 
-.ether-content__btn:focus-visible:focus-visible path,
-.ether-content__btn,
-.ether-content__btn:focus path path {
+.ether-content__btn:focus-visible path,
+.ether-content__btn:focus path {
    visibility: visible;
    fill: var(--color-blue-bluebell);
 }
 
-.ether-content__btn:hover path {
 .ether-content__btn:hover path {
    visibility: visible;
    fill: var(--color-blue-purple);
@@ -688,15 +681,14 @@ body {
    transition: stroke 0.3s ease-in-out;
 }
 
-.podcast-play .podcast-play .podcast-play__icon path,
+.podcast-play .podcast-play__icon path,
 .podcast-play .podcast-play__icon rect,
 .podcast-play .podcast-play__icon {
    transition: fill 0.3s ease-in-out;
 }
 
-.podcast-play:focus-visible .podcast-play:focus-visible .podcast-play__icon circle,
-.podcast-play circle,
-.podcast-play:focus .podcast-play__icon .podcast-play__icon circle {
+.podcast-play:focus-visible .podcast-play__icon circle,
+.podcast-play:focus .podcast-play__icon circle {
    stroke: var(--color-blue-bluebell);
 }
 
@@ -732,7 +724,6 @@ body {
    transition: fill 0.3s ease-in-out;
 }
 
-.podcast-descr__like:focus-visible svg path,
 .podcast-descr__like:focus-visible svg path,
 .podcast-descr__like:focus svg path {
    fill: var(--color-blue-bluebell);
@@ -2260,6 +2251,10 @@ body {
    transition: color 0.3s ease-in-out;
 }
 
+.modal__link:focus-visible {
+   outline: auto;
+}
+
 .modal__link:hover {
    color: var(--color-gray);
 }
@@ -2312,12 +2307,13 @@ body {
 }
 
 .modal-form__input:focus {
-   background-color: var(--color-focus);
+   background-color: var(--color-focus);  
+   border-color: var(--color-blue-bluebell);
 }
 
 .modal-form__input:hover {
    background-color: var(--color-focus);
-   border-color: var(--color-blue-bluebell);
+ 
 }
 
 .modal-form__input:active {
@@ -2336,10 +2332,10 @@ body {
       border 0.3s ease-in-out;
 }
 
-.modal-form__btn:focus,
 .modal-form__btn:focus-visible {
    background-color: var(--color-blue-bluebell);
    border-color: var(--color-deep-purple);
+   outline: none;
 }
 
 .modal-form__btn:hover {
