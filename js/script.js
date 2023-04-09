@@ -142,7 +142,7 @@ document.addEventListener("click", function (e) {
 
 //! PLAY - PAUSE
 // HEADER
-let etherBtn = document.querySelectorAll('.ether-content__btn');
+let etherBtn = document.querySelectorAll('.ether-content-btn');
 
 etherBtn.forEach(function (el) {
    let Play = el.querySelector('.ether-content__play');
@@ -328,6 +328,11 @@ validation
          value: 30,
          errorMessage: 'Имя содержит больше тридцати символов',
       },
+      // {
+      //    rule: 'regex',
+      //    value: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/,
+      //    errorMessage: 'Не допустимые символы',
+      // },
    ])
    .addField('.mail', [
       {
