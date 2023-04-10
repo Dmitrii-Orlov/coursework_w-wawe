@@ -328,11 +328,11 @@ validation
          value: 30,
          errorMessage: 'Имя содержит больше тридцати символов',
       },
-      // {
-      //    rule: 'regex',
-      //    value: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/,
-      //    errorMessage: 'Не допустимые символы',
-      // },
+      {
+         rule: 'customRegexp',
+         value: '^[A-zА-яЁё]+$',
+         errorMessage: 'Не допустимые символы',
+      },
    ])
    .addField('.mail', [
       {
@@ -376,6 +376,11 @@ validationModal
          rule: 'minLength',
          value: 2,
          errorMessage: 'Логин содержит меньше двух символов',
+      },
+         {
+         rule: 'customRegexp',
+         value: '^[A-zА-яЁё]+$',
+         errorMessage: 'Не допустимые символы',
       },
    ])
    .addField('#password', [

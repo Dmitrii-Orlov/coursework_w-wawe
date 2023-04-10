@@ -319,7 +319,7 @@ body {
    transition: stroke 0.3s ease-in-out;
 }
 
-.form-search-open.focus-visible path,
+.form-search-open:focus-visible path,
 .form-search-open:focus path {
    stroke: var(--color-blue-bluebell);
 }
@@ -367,7 +367,7 @@ body {
 }
 
 .enter:focus,
-.enter.focus-visible {
+.enter:focus-visible {
    background-color: var(--color-blue-bluebell);
 }
 
@@ -423,7 +423,7 @@ body {
    transition: fill 0.3s ease-in-out;
 }
 
-.ether-content-btn.focus-visible path,
+.ether-content-btn:focus-visible path,
 .ether-content-btn:focus path {
    visibility: visible;
    fill: var(--color-blue-bluebell);
@@ -649,7 +649,7 @@ body {
    margin-right: 30px;
 }
 
-.podcast-descr__wrap {
+.podcast-descr__wrap svg {
    margin-right: 3px;
 }
 
@@ -662,7 +662,7 @@ body {
 .podcast-btn {
    padding-top: var(--gap30);
    justify-content: center;
- }
+}
 
 .podcast-btn__still {
    color: var(--color-blue-purple);
@@ -708,12 +708,12 @@ body {
    transition: fill 0.3s ease-in-out;
 }
 
-.podcast-play.focus-visible .podcast-play__icon circle,
+.podcast-play:focus-visible .podcast-play__icon circle,
 .podcast-play:focus .podcast-play__icon circle {
    stroke: var(--color-blue-bluebell);
 }
 
-.podcast-play.focus-visible .podcast-play__icon path,
+.podcast-play:focus-visible .podcast-play__icon path,
 .podcast-play:focus .podcast-play__icon path {
    fill: var(--color-blue-bluebell);
 }
@@ -740,12 +740,64 @@ body {
    fill: var(--color-white)
 }
 
+.podcast-descr__wrap path {
+   transition: fill 0.3s ease-in-out;
+}
+
+.podcast-descr__wrap:focus path,
+.podcast-descr__wrap:focus-visible path {
+   fill: var(--color-blue-purple);
+}
+
+.podcast-descr__wrap:hover path {
+   fill: var(--color-blue-purple);
+}
+
+.podcast-descr__wrap:active path {
+   fill: var(--color-deep-purple);
+}
+
+.podcast-descr__wrap .podcast-descr__count {
+transition: color 0.3s ease-in-out;
+}
+
+.podcast-descr__wrap:focus .podcast-descr__count,
+.podcast-descr__wrap:focus-visible .podcast-descr__count {
+   color: var(--color-blue-purple);
+}
+
+.podcast-descr__wrap:hover .podcast-descr__count {
+   color: var(--color-blue-purple);
+}
+
+.podcast-descr__wrap:active .podcast-descr__count {
+   color: var(--color-deep-purple);
+}
+
+
+/* .podcast-descr__count {
+   transition: color 0.3s ease-in-out;
+}
+
+.podcast-descr__count:focus,
+.podcast-descr__count:focus-visible {
+   color: var(--color-blue-bluebell);
+}
+
+.podcast-descr__count:hover {
+   color: var(--color-blue-purple);
+}
+
+.podcast-descr__count:active {
+   color: var(--color-deep-purple);
+}
+
 .podcast-descr__like svg,
 .podcast-descr__like svg path {
    transition: fill 0.3s ease-in-out;
 }
 
-.podcast-descr__like.focus-visible svg path,
+.podcast-descr__like:focus-visible svg path,
 .podcast-descr__like:focus svg path {
    fill: var(--color-blue-bluebell);
 }
@@ -772,7 +824,7 @@ body {
 
 .podcast-descr__share:active svg path {
    fill: var(--color-deep-purple);
-}
+} */
 
 /* ------------------------------------------------------------------------ */
 
@@ -914,7 +966,7 @@ body {
 }
 
 .broadcast__link:focus::after,
-.broadcast__link.focus-visible::after {
+.broadcast__link:focus-visible::after {
    outline: 1px solid var(--color-blue-purple);
    outline-offset: 7px;
 }
@@ -968,7 +1020,7 @@ body {
 }
 
 .broadcast-archive__mic {
-   margin-bottom: 24px;
+   margin-bottom: 27px;
 }
 
 .broadcast-archive__descr {
@@ -989,7 +1041,7 @@ body {
 }
 
 .broadcast-archive__link:focus,
-.broadcast-archive__link.focus-visible {
+.broadcast-archive__link:focus-visible {
    background-color: var(--color-blue-bluebell);
 }
 
@@ -1080,7 +1132,7 @@ body {
    color: #121723;
 }
 
-.choices__inner .focus-visible {
+.choices__inner :focus-visible {
    outline: 2px solid #FF5C00;
    z-index: 5;
 }
@@ -1561,11 +1613,13 @@ body {
 }
 
 .playlist-album__item:focus-visible,
-.playlist-album__item.focus-visible {
+.playlist-album__item:focus-visible {
    outline: none;
 }
 
-.playlist-picture {}
+.playlist-picture:focus-visible {
+   outline: none;
+}
 
 .playlist-album__foto {
    position: relative;
@@ -1636,7 +1690,7 @@ body {
 }
 
 .playlist-album__play:focus img,
-.playlist-album__play.focus-visible img,
+.playlist-album__play:focus-visible img,
 .playlist-album__play:hover img {
    width: 42px;
 }
@@ -1648,8 +1702,9 @@ body {
 .playlist-album__play {
    transition: opacity 0.3s ease-in-out;
 }
+
 .playlist-album__play:focus,
-.playlist-album__play.focus-visible,
+.playlist-album__play:focus-visible,
 .playlist-album__play:hover,
 .playlist-album__play:active {
    opacity: 1;
@@ -1663,7 +1718,7 @@ body {
 }
 
 .playlist-album__play:focus+.playlist-album__descr,
-.playlist-album__play.focus-visible+.playlist-album__descr {
+.playlist-album__play:focus-visible+.playlist-album__descr {
    background-color: var(--color-blue-bluebell);
    color: var(--color-blue-dark);
    border: none;
@@ -1680,7 +1735,7 @@ body {
 }
 
 .playlist-album__play:focus+.playlist-album__descr .playlist-album__cont,
-.playlist-album__play.focus-visible+.playlist-album__descr .playlist-album__cont {
+.playlist-album__play:focus-visible+.playlist-album__descr .playlist-album__cont {
    color: var(--color-blue-dark);
 }
 
@@ -1690,6 +1745,7 @@ body {
 .playlist-album__play:active+.playlist-album__descr .playlist-album__cont {
    color: var(--color-white);
 }
+
 /* ----------------------------------------------------------------------------------- */
 
 /* ! MARKET */
@@ -1944,8 +2000,8 @@ body {
 
 }
 
-.swiper-button-prev.focus-visible,
-.swiper-button-next.focus-visible {
+.swiper-button-prev:focus-visible,
+.swiper-button-next:focus-visible {
    outline: none;
    /* border: none; */
 }
@@ -2243,8 +2299,8 @@ body {
 
 .modal__close:focus svg circle,
 .modal__close:focus svg path,
-.modal__close.focus-visible svg circle,
-.modal__close.focus-visible svg path {
+.modal__close:focus-visible svg circle,
+.modal__close:focus-visible svg path {
    stroke: var(--color-blue-bluebell);
 }
 
@@ -2281,7 +2337,7 @@ body {
    transition: color 0.3s ease-in-out;
 }
 
-.modal__link.focus-visible {
+.modal__link:focus-visible {
    outline: auto;
 }
 
@@ -2362,7 +2418,7 @@ body {
       border 0.3s ease-in-out;
 }
 
-.modal-form__btn.focus-visible {
+.modal-form__btn:focus-visible {
    background-color: var(--color-blue-bluebell);
    border-color: var(--color-deep-purple);
    outline: none;
@@ -2399,9 +2455,9 @@ body {
 .modal-social__f:focus svg path,
 .modal-social__wk:focus svg rect,
 .modal-social__g:focus svg rect,
-.modal-social__f.focus-visible svg path,
-.modal-social__wk.focus-visible svg rect,
-.modal-social__g.focus-visible svg rect {
+.modal-social__f:focus-visible svg path,
+.modal-social__wk:focus-visible svg rect,
+.modal-social__g:focus-visible svg rect {
    fill: var(--color-blue-bluebell);
 }
 
