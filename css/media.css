@@ -1,6 +1,164 @@
-@media (max-width: 1300px) {}
+@media (max-width: 1366px) {
+   .container {
+      max-width: 1024px;
+   }
 
-@media (max-width: 992px) {
+   .header-container {
+      height: fit-content;
+   }
+
+   .header-back {
+      display: block;
+   }
+
+   .header-logo {
+      width: 100%;
+   }
+
+   .header-logo img {
+      max-width: 112px;
+      height: 60px;
+      align-self: center;
+   }
+
+   .header-row-top {
+      width: 100%;
+      height: 72px;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--color-gray-light);
+      border-width: inherit;
+   }
+
+   .header-nav {
+      max-width: 638px;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+   }
+
+   .header-row-bottom {
+      width: 100%;
+      height: 62px;
+   }
+
+   .nav-bottom {
+      width: 59%;
+   }
+
+   .nav-bottom__list {
+      justify-content: space-between;
+   }
+
+   .nav-bottom__item {
+      margin-right: 0;
+   }
+
+   .header-line {
+      top: 140px;
+   }
+
+   .header-search {
+      height: 60px;
+   }
+
+   .ether-content {
+      min-width: 148px;
+   }
+
+   .ether-age {
+      display: none;
+   }
+
+   .hero-descr__title {
+      margin-bottom: 12px;
+   }
+
+   .hero-descr__text {
+      margin-bottom: 16px;
+   }
+
+   .hero-img {
+      margin: -17px 0;
+   }
+
+   .broadcast__item {
+      width: calc(100% / 2);
+   }
+
+   .broadcast-left {
+      max-height: 561px;
+   }
+
+   .guests-top__descr {
+      max-width: 536px;
+   }
+
+   .guest-item {
+      column-count: 3;
+   }
+
+   .guests-bloggers {
+      max-width: 536px;
+   }
+
+   .guest-plug,
+   .guest-content {
+      max-width: 255px;
+   }
+
+   .guest-item__name {
+      margin-bottom: 8px;
+   }
+
+   .playlist-genre {
+      flex-wrap: wrap;
+      max-height: 190px;
+      margin: 0;
+   }
+
+   .playlist-genre__item {
+      margin-right: 34px;
+   }
+
+   .playlists-content {
+      display: none;
+   }
+
+   .playlist-album {
+      max-width: fit-content;
+   }
+
+   .playlist-album__item {
+      width: calc(100% / 3);
+      flex-wrap: nowrap;
+      flex-direction: row;
+   }
+
+   .playlist-album__foto {
+      max-width: 112px;
+   }
+
+   .playlist-album__flag {
+      left: 15px;
+   }
+
+   .playlist-album__descr {
+      min-width: 143px;
+      padding-top: 40px;
+      padding-left: 10px;
+   }
+
+   @media (max-width: 1200px) {
+      .container {
+         /* max-width: 824px; */
+      }
+   }
+
+
+
+
+   /* @media (max-width: 992px) {
   .header-nav {
     position: absolute;
     top: 0;
@@ -25,7 +183,7 @@
   }
 
   .header-nav .nav__item:not(:last-child) {
-    /* margin-bottom: 56px; */
+    margin-bottom: 56px;
   }
 
   .header-nav--active,
@@ -34,7 +192,7 @@
     transform: none;
   }
 .burger {
-  /* top: 50px; */
+  top: 50px;
 
 }
   .burger--active .burger__line:nth-child(2) {
@@ -113,4 +271,4 @@
   }
 
   
-}
+} */

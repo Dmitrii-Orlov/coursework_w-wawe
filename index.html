@@ -18,20 +18,23 @@
 
 <body>
    <header class="header">
-      <hr class="header-line">
-      <div class="container header-container">
-         <button aria-label="раскрывающая меню" class="btn-reset burger">
+      <div class="header-back"></div>
+      <div class="header-line"></div>
+      <!-- <hr class="header-line-top"> -->
+      <!-- <hr class="header-line"> -->
+      <div class="container header-container flex">
+         <a class="header-logo" href="#" aria-label="Логотип сайта радио В-вэйв">
+            <picture>
+               <!-- <source srcset="img/logo-mobile.svg" media="(max-width: 576px)"> -->
+               <img src="img/header-logo.svg" alt="Логотип сайта радио W-Wawe">
+            </picture>
+         </a>
+         <!-- <button aria-label="раскрывающая меню" class="btn-reset burger">
             <span class="burger__line"></span>
             <span class="burger__line"></span>
             <span class="burger__line"></span>
-         </button>
+         </button> -->
          <div class="header-row-top flex">
-            <a class="header-logo" href="#" aria-label="Логотип сайта радио В-вэйв">
-               <picture>
-                  <!-- <source srcset="img/logo-mobile.svg" media="(max-width: 576px)"> -->
-                  <img src="img/header-logo.svg" alt="Логотип сайта радио W-Wawe">
-               </picture>
-            </a>
             <div class="header-nav flex">
                <ul class="header-nav__list list-reset flex">
                   <li class="header-nav__item">
@@ -151,7 +154,7 @@
                         Ранее в&nbsp;эфире
                      </div>
                      <div class="ether-descr__bottom">
-                        «Музыка»
+                        &laquo;Музыка&raquo;
                      </div>
                   </div>
                </div>
