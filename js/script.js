@@ -133,7 +133,7 @@ document.querySelector(".form-search-open").addEventListener("click", function (
 document.addEventListener("click", function (e) {
    let target = e.target;
    let search = document.querySelector(".header-search-open");
-   if ( !target.closest('.form-search-open')) {
+   if (!target.closest('.form-search-open')) {
       search.classList.remove("header-search-open--active");
       search.querySelector("input").value = "";
       document.querySelector(".form-search-open").classList.remove("form-search-open--active")
@@ -168,26 +168,25 @@ podcastBtn.forEach(function (el) {
 });
 
 //! БУРГЕР
-// let burger = document.querySelector('.burger');
-// let menu = document.querySelector('.header-nav');
-// let menuLinks = menu.querySelectorAll('.nav__link');
+let burger = document.querySelector('.burger');
+let menu = document.querySelector('.header-nav');
+let menuLinks = menu.querySelectorAll('.header-nav__link');
 
-// burger.addEventListener('click',
+burger.addEventListener('click',
 
-//   function () {
-//     burger.classList.toggle('burger--active');
-//     menu.classList.toggle('header-nav--active');
-//     document.body.classList.toggle('stop-scroll');
-//     search_open.classList.remove('header-search-open--active');
-//   });
+   function () {
+      burger.classList.toggle('burger--active');
+      menu.classList.toggle('header-nav--active');
+      document.body.classList.toggle('stop-scroll');
+   });
 
-// menuLinks.forEach(function (el) {
-//   el.addEventListener('click', function () {
-//     burger.classList.remove('burger--active');
-//     menu.classList.remove('header-nav--active');
-//     document.body.classList.remove('stop-scroll');
-//   });
-// });
+menuLinks.forEach(function (el) {
+   el.addEventListener('click', function () {
+      burger.classList.remove('burger--active');
+      menu.classList.remove('header-nav--active');
+        document.body.classList.remove('stop-scroll');
+   });
+});
 
 
 
@@ -377,7 +376,7 @@ validationModal
          value: 2,
          errorMessage: 'Логин содержит меньше двух символов',
       },
-         {
+      {
          rule: 'customRegexp',
          value: '^[A-zА-яЁё]+$',
          errorMessage: 'Не допустимые символы',
