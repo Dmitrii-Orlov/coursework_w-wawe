@@ -325,7 +325,7 @@ button:focus-visible,
    -ms-flex-align: center;
    align-items: center;
    width: 308px;
-   height: 30px;
+   height: var(--gap30);
    background: var(--color-white);
 }
 
@@ -588,10 +588,10 @@ button:focus-visible,
 }
 
 .podcasts-title {
-   margin-bottom: 30px;
    font-weight: 400;
    font-size: 48px;
    line-height: 100%;
+   margin-bottom: var(--gap30);
    color: var(--color-blue-dark);
 }
 
@@ -599,15 +599,18 @@ button:focus-visible,
    justify-content: space-between;
    margin-right: -15px;
    margin-left: -15px;
+   margin-bottom: 26px;
 }
 
 .podcast {
    position: relative;
    width: 50%;
+   min-height: 140px;
+   height: 100%;
    display: none;
    padding-right: 15px;
    padding-left: 15px;
-   margin-bottom: 26px;
+   margin-bottom: var(--gap30);
 }
 
 .podcast--visible {
@@ -645,7 +648,9 @@ button:focus-visible,
 }
 
 .podcasts-top {
-   padding: 24px 30px;
+   /* padding: 24px 30px; */
+   height: 78%;
+   padding: 0 30px;
    justify-content: space-between;
    align-items: center;
    border-bottom: 1px solid var(--color-gray-light);
@@ -677,7 +682,7 @@ button:focus-visible,
 }
 
 .podcasts-actions {
-   padding: 9px 30px 6px;
+   padding: 8px 30px 6px;
 }
 
 .podcast-descr {
@@ -695,7 +700,7 @@ button:focus-visible,
 }
 
 .podcast-btn {
-   padding-top: var(--gap30);
+   /* padding-top: var(--gap30); */
    justify-content: center;
 }
 
@@ -812,19 +817,22 @@ button:focus-visible,
 /* ------------------------------------------------------------------------ */
 
 /*! Передачи */
+
+
 .broadcasts-wrap {
+   position: relative;
    flex-wrap: nowrap;
 }
 
 .broadcast-left {
    flex-direction: column;
-   justify-content: space-between;
    max-width: 255px;
    margin-right: var(--gap30);
 }
 
 .broadcast-author {
    position: relative;
+   max-width: 255px;
    width: 100%;
    margin-right: var(--gap30);
    margin-bottom: var(--gap30);
@@ -847,7 +855,7 @@ button:focus-visible,
 
 .broadcast {
    margin: -15px;
-   padding-top: 13px;
+   padding-top: 12px;
 }
 
 .broadcast--visible {
@@ -997,7 +1005,15 @@ button:focus-visible,
    fill: var(--color-deep-purple);
 }
 
+.broadcasts-line {
+   display: none;
+}
+
 .broadcast-archive {
+   position: absolute;
+   bottom: 98px;
+   max-width: 255px;
+   margin-right: var(--gap30);
    flex-direction: column;
    justify-content: flex-end;
    align-items: flex-start;
@@ -1005,6 +1021,10 @@ button:focus-visible,
 
 .broadcast-archive__mic {
    margin-bottom: 23px;
+}
+
+.broadcast-archive__content {
+   justify-content: flex-start;
 }
 
 .broadcast-archive__descr {
@@ -1180,7 +1200,7 @@ button:focus-visible,
 }
 
 .guests-top {
-   width: 825px;
+   max-width: 825px;
 }
 
 .guests-top__title {
@@ -1249,10 +1269,11 @@ button:focus-visible,
 }
 
 .guest-item__name {
-   margin-bottom: 11px;
+   /* margin-bottom: 11px; */
 }
 
 .guest-item__btn {
+   padding: 10px 0;
    text-align: start;
    font-size: 16px;
    line-height: 16px;
@@ -1448,7 +1469,7 @@ button:focus-visible,
 }
 
 .ui-accordion .ui-accordion-content {
-   padding: 25px 0;
+   padding: 10px 0;
    background: none;
 }
 
@@ -1917,6 +1938,11 @@ button:focus-visible,
    margin-right: var(--gap30);
 }
 
+.we-svg__spring2 {
+  display: none;
+   margin-right: var(--gap30);
+}
+
 .swiper-slide__img img {
    vertical-align: top;
    max-height: 255px;
@@ -2054,7 +2080,7 @@ button:focus-visible,
    width: 100%;
    font-size: 20px;
    line-height: 20px;
-   padding: 23px 30px;
+   padding: 24px 30px;
    margin-bottom: var(--gap30);
    color: var(--color-gray);
    cursor: pointer;
@@ -2149,9 +2175,8 @@ button:focus-visible,
 
 /* ! FOOTER */
 .footer-container {
-   justify-content: space-between;
-   background-color: var(--color-focus);
-   margin-bottom: -25px;
+     background-color: var(--color-focus);
+ 
 }
 
 .footer-icon {
@@ -2159,7 +2184,7 @@ button:focus-visible,
 }
 
 .footer-logo {
-   margin-bottom: 22px;
+   margin-bottom: 20px;
    cursor: auto;
 }
 
@@ -2189,6 +2214,11 @@ button:focus-visible,
 
 .footer-social__icon {
    margin-right: 21px;
+}
+
+.footer-content {
+justify-content: space-between;
+margin-bottom: -25px;
 }
 
 .footer-nav {
@@ -2278,8 +2308,8 @@ button:focus-visible,
 
 .modal__close {
    position: absolute;
-   top: 30px;
-   right: 30px;
+   top: var(--gap30);
+   right: var(--gap30);
 }
 
 .modal__close svg circle,
@@ -2396,10 +2426,6 @@ button:focus-visible,
    color: var(--color-white);
    background: none;
    border-color: var(--color-white);
-}
-
-.we-form__label .name {
-   margin-right: var(--gap30);
 }
 
 .modal-form__btn {
