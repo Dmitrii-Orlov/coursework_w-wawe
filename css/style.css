@@ -1999,8 +1999,6 @@ body {
    justify-content: space-between;
 }
 
-.we-form__text {}
-
 .we-form__text .text {
    width: 100%;
    min-height: 150px;
